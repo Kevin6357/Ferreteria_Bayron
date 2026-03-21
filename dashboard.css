@@ -11,7 +11,7 @@
      --text: #1a1a1a;            /* #1a1a1a; color del texto principal */
      --sidebar-w: 220px;            /*Ancho del menú (sidebar) izquierda */
      --sidebar-icons: 64px;         /* solo se muestra en la tablet el icono */
-     --sidebar-bg:#FFFFFF;       /*Color del fondod el sidebar*/
+     --sidebar-bg:#EAE312;       /*Color del fondod el sidebar*/
      --siderbar-line: rgba(0, 0, 0, 0.15);
      --muted: #999;              /* Texto-Secundario */
  }
