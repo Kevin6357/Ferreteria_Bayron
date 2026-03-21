@@ -8,7 +8,7 @@
 /* VARIABLES GLOBALES EN CSS*/
 :root{
      --bg: #f5f5f5;              /* backbround o fondo de la pagina */
-     --text: #1a1a1a;            /* #1a1a1a; color del texto principal */
+     --text: #ffffff;            /* #1a1a1a; color del texto principal */
      --sidebar-w: 220px;            /*Ancho del menú (sidebar) izquierda */
      --sidebar-icons: 64px;         /* solo se muestra en la tablet el icono */
      --sidebar-bg:#EAE312;       /*Color del fondod el sidebar*/
