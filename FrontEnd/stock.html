@@ -59,7 +59,8 @@
 
         <div class="main-content">
             <div class="card shadow-sm border-0">
-                <div class="card-header bg-white py-3 border-0 d-flex justify-content-between align-items-center flex-wrap">
+                <div
+                    class="card-header bg-white py-3 border-0 d-flex justify-content-between align-items-center flex-wrap">
                     <h4 class="mb-0 fw-bold">
                         <i class="fas fa-clipboard-list text-primary me-2"></i>
                         ESTADO DE INVENTARIO
@@ -68,26 +69,112 @@
                         <i class="fas fa-plus me-1"></i> REGISTRAR
                     </button>
                 </div>
-                <div class="card-body p-0">
-                    <div class="table-responsive">
-                        <table class="table table-hover table-striped align-middle mb-0">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Producto</th>
-                                    <th>Stock</th>
-                                    <th>Estado</th>
-                                    <th class="text-center">Opciones</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table-cliente">
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-cliente">
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
     </main>
+
+    <!-- Botón para abrir el modal -->
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProducto">
+        Abrir formulario
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalProducto" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body">
+                    <form id="formProducto">
+
+                        <div class="mb-3">
+                            <label>Producto</label>
+                            <input type="text" class="form-control" id="producto">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Stock</label>
+                            <input type="number" class="form-control" id="stock">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Estado</label>
+                            <select class="form-control" id="estado">
+                                <option value="disponible">Disponible</option>
+                                <option value="no disponible">No Disponible</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-primary" id="btnGuardar">Guardar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- Modal EDITAR-PRODUCTO-->
+<div class="modal fade" id="modalEditarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">Producto</label>
+                    <input type="text" class="form-control" id="c_u_nombre" name="producto" required>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="c_u_stock" name="stock" required>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Estado</label>
+                    <select class="form-control" id="c_u_estado" name="estado" required>
+                        <option value="disponible">Disponible</option>
+                        <option value="no disponible">No Disponible</option>
+                    </select>
+                </div>
+               
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btn-Editarcliente">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <script src="js/main.js"></script>
     <script src="js/sidebar.js"></script>
