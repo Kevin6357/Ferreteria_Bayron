@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="Es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferretería Bayron - Panel de Administración</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- TOPBAR (solo visible en móvil) -->
+    <div class="topbar">
+      <div class="title-business">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <span>FERRETERIA BAYRON</span>
+      </div>
+      <div class="btn-menu">
+        <button class="hamburger" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>Ferretería Bayron</span>
+      </div>
+      <ul>
+        <li>
+          <a href="#" class="activo" data-page="home">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html" data-page="stock">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>Stock</span>
+          </a>
+        </li>
+        <li>
+          <a href="defectuoso.html" data-page="defectuoso">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Producto Defectuoso</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+      <section class="header">
+        <h2>Bienvenido</h2>
+        <p>
+          Control de productos defectuosos, stock bajo y exceso de inventario.
+        </p>
+      </section>
+      <div class="main-logo">
+        <img
+          src="img/logo.jpeg"
+          alt="Logo Ferretería Bayron"
+          class="main-logo-img"
+        />
+      </div>
+      
+
+    <script src="js/main2.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
