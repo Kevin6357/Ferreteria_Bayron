@@ -1,6 +1,6 @@
 ## TRELLO
 Más info en [mi tablero de trello](https://trello.com/b/4lC3J8oT/java-proyecto-senati)
-![TRELLO](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Trello.png)
+![TRELLO](https://github.com/Kevin6357/Ferreteria_Bayron/blob/a65f2edaee9a97e385b0895dd7b36b57ceea333c/Captura%20de%20pantalla%202026-04-20%20222502.png)
 
 ---
 # Sistema de Préstamos Gota a Gota
