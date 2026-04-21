@@ -1,5 +1,5 @@
 ## TRELLO
-Más info en [mi tablero de trello](https://trello.com/b/4lC3J8oT/java-proyecto-senati)
+Más info en [mi tablero de trello](https://trello.com/invite/b/69a1f855ef397664559d6c61/ATTIb76ef655945bc2780535a61956e18cd720F56000/ferreteria-bayron)
 ![TRELLO](https://github.com/Kevin6357/Ferreteria_Bayron/blob/a65f2edaee9a97e385b0895dd7b36b57ceea333c/Captura%20de%20pantalla%202026-04-20%20222502.png)
 
 ---
