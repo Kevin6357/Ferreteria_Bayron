@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="Es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferretería Bayron - Productos Defectuosos</title>
-    <!-- Font Awesome 6 (recomendado) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/defectuoso.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <div class="topbar">
         <div class="title-business">
@@ -54,33 +55,36 @@
             <i class="fa-solid fa-chevron-right"></i>
             <span id="breadcrumb-page">Productos Defectuosos</span>
         </nav>
+
         <div class="main-content">
-            <!-- Tarjeta con sombra -->
             <div class="card shadow-sm border-0">
-                <div class="card-header bg-white py-3 border-0 d-flex justify-content-between align-items-center flex-wrap">
+                <div
+                    class="card-header bg-white py-3 border-0 d-flex justify-content-between align-items-center flex-wrap">
                     <h4 class="mb-0 fw-bold">
                         <i class="fas fa-triangle-exclamation text-warning me-2"></i>
                         PRODUCTOS DEFECTUOSOS
                     </h4>
-                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDefectuoso">
+                    <!-- ✅ Abre el modal correcto -->
+                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalDefectuoso">
                         <i class="fas fa-plus me-1"></i> REGISTRAR
                     </button>
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped align-middle mb-0">
-                            
                             <thead class="table-dark">
                                 <tr>
                                     <th>ID Defecto</th>
                                     <th>ID Producto</th>
-                                    <th>Herramienta</th>
+                                    <th>Nombre</th>
+                                    <th>Stock</th>
+                                    <th>Estado</th>
                                     <th>Motivo</th>
                                     <th class="text-center">Opciones</th>
                                 </tr>
                             </thead>
+                            <!-- ✅ ID sincronizado con el JS -->
                             <tbody id="table-defectuosos">
-                                <!-- Las filas se generan dinámicamente -->
                             </tbody>
                         </table>
                     </div>
@@ -89,8 +93,61 @@
         </div>
     </main>
 
-    <script src="js/main2.js"></script>
-    <script src="js/sidebar.js"></script>
+    <!-- ✅ Modal registrar producto defectuoso -->
+    <div class="modal fade" id="modalDefectuoso" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-triangle-exclamation text-warning me-2"></i>
+                        Registrar Producto Defectuoso
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="producto" placeholder="Ej: Martillo, Taladro...">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="stock" placeholder="Cantidad" min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Estado</label>
+                        <select class="form-control" id="estado">
+                            <option value="defectuoso">Defectuoso</option>
+                            <option value="en revision">En Revisión</option>
+                            <option value="dado de baja">Dado de Baja</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Motivo del Defecto</label>
+                        <textarea class="form-control" id="motivo" rows="3"
+                            placeholder="Describe el motivo del defecto..."></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-1"></i> Cerrar
+                    </button>
+                    <!-- ✅ ID que usa el JS -->
+                    <button class="btn btn-warning" id="btnGuardar">
+                        <i class="fas fa-save me-1"></i> Guardar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Bootstrap primero, luego tus scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/main2.js"></script>
 </body>
+
 </html>
