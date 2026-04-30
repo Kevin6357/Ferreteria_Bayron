@@ -80,7 +80,7 @@ JavaWeb-GotaGota/
 ---
 
 ### DIAGRAMA DE FIGMA UI/UX
-![FIGMA](https://www.figma.com/design/3EuyqtLwialC0nAuCtEWnA/from_Ferreteria_Bayron?node-id=0-1&t=18cHMgqTxoqX28Rx-1)
+[mi Figma](https://www.figma.com/design/3EuyqtLwialC0nAuCtEWnA/from_Ferreteria_Bayron?node-id=0-1&t=18cHMgqTxoqX28Rx-1)
 
 ## Base de datos
  
