@@ -3,7 +3,7 @@ Más info en [mi tablero de trello](https://trello.com/invite/b/69a1f855ef397664
 ![TRELLO](https://github.com/Kevin6357/Ferreteria_Bayron/blob/a65f2edaee9a97e385b0895dd7b36b57ceea333c/Captura%20de%20pantalla%202026-04-20%20222502.png)
 
 ---
-# Sistema de Inventario
+# Sistema de Inventario Ferreteria Bayron
 Sistema web para la gestión de Venta de herramientas, materiales de construcción y productos de mantenimiento.
 
 ## Descripcion del negocio
