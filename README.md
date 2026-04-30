@@ -24,19 +24,22 @@ De esta manera, la empresa podrá organizar mejor su inventario, tomar decisione
 ## Requerimientos Funcionales
 | Codigo | Descripcion |
 |---|---|
-| RF01 | El sistema debe permitir registrar un nuevo cliente con nombre, apellido, DNI, telefono y direccion |
-| RF02 | El sistema debe permitir registrar un nuevo prestamo indicando monto total, cuota, numero de cuotas y fecha de inicio |
-| RF03 | El sistema debe permitir registrar el cobro diario de un cliente asociado a su prestamo |
-| RF04 | El sistema debe mostrar el listado de todos los clientes con su estado de deuda |
-| RF05 | El sistema debe mostrar el historial de cobros realizados por prestamo |
- 
+| DEFECTO  | Registrar productos defectuosos y bloquear su venta  |
+| STOCK  | Detectar productos con bajo stock  |
+| ALERTA | Generar alertas cuando el producto esté por agotarse  |
+| SOBRESTOCK  | Identificar productos con exceso de inventario   |
+| CONSULTA | Permitir visualizar el estado del inventario  |
+| CONTROL  | Gestionar correctamente los productos disponibles |
+
 ## Requerimientos No Funcionales
  
 | Codigo | Tipo | Descripcion |
 |---|---|---|
-| RNF01 | Rendimiento | El sistema debe cargar cada pantalla en menos de 3 segundos |
-| RNF02 | Usabilidad | La interfaz debe ser intuitiva y facil de usar sin necesidad de capacitacion previa |
-| RNF03 | Seguridad | Solo usuarios autorizados podran acceder al sistema mediante usuario y contraseña |
+| USABLE | Rendimiento | El sistema debe ser fácil de usar  |
+| RAPIDO | Usabilidad | El sistema debe responder rápidamente |
+| SEGURO | Seguridad | Debe proteger la información  |
+| DISPONIBLE | Rendimiento | Debe estar disponible en horario laboral |
+| ESCALABLE | Rendimiento | Debe permitir futuras mejoras |
 
 ## Stack completo
 1. Trello             = Gestión del proyecto (Kanban)
