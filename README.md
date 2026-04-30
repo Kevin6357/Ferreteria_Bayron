@@ -65,14 +65,16 @@ De esta manera, la empresa podrá organizar mejor su inventario, tomar decisione
  
 ```
 JavaWeb-GotaGota/
-├── backend/          → Spring Boot (Java)
-│   ├── src/
+├── backend/         
+│   ├── src/                  → Spring Boot (Java)
 │   ├── pom.xml
 │   └── ...
-├── frontend/         → HTML, CSS, JS
+├── frontend/         
 │   ├── css/
 │   ├── js/
-│   └── index.html
+|   ├── defectuoso.html        → HTML, CSS, JS
+│   ├── index.html
+|   └── stock.html
 ```
  
 ---
