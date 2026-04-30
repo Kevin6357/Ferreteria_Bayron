@@ -115,64 +115,65 @@ Un producto puede generar múltiples alertas de stock, pero cada alerta correspo
 
 ### Base de datos
  
-El sistema cuenta con 4 tablas principales:
+El sistema cuenta con 2 tablas principales:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS gota_a_gota;
-USE gota_a_gota;
+CREATE DATABASE ferreteria_bayron;
 
-CREATE TABLE cobrador (
-    cobrador_id INT AUTO_INCREMENT PRIMARY KEY,
+USE ferreteria_bayron;
+
+
+CREATE TABLE productos (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    telefono VARCHAR(15),
-    email VARCHAR(100)
+    stock INT NOT NULL,
+    estado VARCHAR(20) DEFAULT 'disponible'
 );
 
-CREATE TABLE cliente (
-    cliente_id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    dni VARCHAR(8) NOT NULL UNIQUE,
-    telefono VARCHAR(15),
-    direccion VARCHAR(255)
-);
-
-CREATE TABLE prestamo (
-    prestamo_id INT AUTO_INCREMENT PRIMARY KEY,
-    cobrador_id INT NOT NULL,
-    cliente_id INT NOT NULL,
-    monto_total DECIMAL(10,2) NOT NULL,
-    monto_cuota DECIMAL(10,2) NOT NULL,
-    num_cuotas INT NOT NULL,
-    fecha_inicio DATE NOT NULL,
-    estado ENUM('activo', 'pagado') DEFAULT 'activo',
-    FOREIGN KEY (cobrador_id) REFERENCES cobrador(cobrador_id),
-    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
-);
-
-CREATE TABLE cobro (
-    cobro_id INT AUTO_INCREMENT PRIMARY KEY,
-    prestamo_id INT NOT NULL,
-    fecha_cobro DATE NOT NULL,
-    monto_cobrado DECIMAL(10,2) NOT NULL,
-    estado ENUM('pagado', 'pendiente') DEFAULT 'pendiente',
-    FOREIGN KEY (prestamo_id) REFERENCES prestamo(prestamo_id)
+CREATE TABLE productos_defectuosos (
+    id_defecto INT AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT,
+    motivo VARCHAR(100),
+    FOREIGN KEY (id_producto)
+        REFERENCES productos(id_producto)
+        ON DELETE CASCADE
 );
 
 
-INSERT INTO cliente (nombre, apellido, dni, telefono, direccion) VALUES
-('Juan', 'Perez', '12345678', '961234567', 'Jr. Inmaculada 123, Pucallpa'),
-('Maria', 'Garcia', '23456789', '962345678', 'Av. Centenario 456, Pucallpa'),
-('Carlos', 'Lopez', '34567890', '963456789', 'Jr. Ucayali 789, Pucallpa'),
-('Rosa', 'Martinez', '45678901', '964567890', 'Av. Tupac Amaru 321, Pucallpa'),
-('Pedro', 'Sanchez', '56789012', '965678901', 'Jr. 7 de Junio 654, Pucallpa'),
-('Ana', 'Torres', '67890123', '966789012', 'Av. Yarinacocha 987, Pucallpa'),
-('Luis', 'Flores', '78901234', '967890123', 'Jr. Progreso 147, Pucallpa'),
-('Carmen', 'Ramirez', '89012345', '968901234', 'Av. Sáenz Peña 258, Pucallpa'),
-('Jorge', 'Diaz', '90123456', '969012345', 'Jr. Coronel Portillo 369, Pucallpa'),
-('Sandra', 'Vega', '01234567', '960123456', 'Av. Nueva Requena 741, Pucallpa');
+INSERT INTO productos (nombre, stock, estado) VALUES
+('Taladro percutor inalámbrico', 12, 'disponible'),
+('Juego de llaves mixtas 11 piezas', 8, 'disponible'),
+('Sierra caladora', 5, 'disponible'),
+('Pistola de silicona caliente', 20, 'disponible'),
+('Cincel para concreto 3/4', 30, 'disponible'),
+('Lima para metal triangular', 15, 'disponible'),
+('Caja organizadora de herramientas', 10, 'disponible'),
+('Nivel láser autónivelante', 4, 'disponible'),
+('Remachadora manual', 18, 'disponible'),
+('Escuadra de precisión 12"', 25, 'disponible'),
+('Grapadora eléctrica', 7, 'disponible'),
+('Máscara de soldar automática', 6, 'disponible'),
+('Carretilla de jardín 80L', 3, 'disponible'),
+('Cepillo eléctrico para madera', 9, 'disponible'),
+('Lijadora orbital', 11, 'disponible');
 
+
+INSERT INTO productos_defectuosos (id_producto, motivo) VALUES
+(1, 'Mango roto'),
+(2, 'Punta despuntada'),
+(3, 'Motor sobrecalentado'),
+(4, 'Hoja doblada'),
+(5, 'Engranaje desgastado'),
+(6, 'Cinta rasgada'),
+(7, 'Resorte sin fuerza'),
+(8, 'Disco de corte descentrado'),
+(9, 'Llave faltante en el juego'),
+(10, 'Envase con fuga'),
+(11, 'Batería no retiene carga'),
+(12, 'Llave 10mm falta en el juego'),
+(13, 'Hoja de sierra doblada'),
+(14, 'Pistola no calienta uniformemente'),
+(15, 'Lijadora con rodamiento ruidoso');
 
 ```
 
