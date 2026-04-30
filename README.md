@@ -84,7 +84,7 @@ JavaWeb-GotaGota/
 
 ## Base de datos
  
-El sistema cuenta con 4 tablas principales:
+El sistema cuenta con 2 tablas principales:
  
 | Tabla | Descripcion |
 |---|---|
@@ -94,24 +94,23 @@ El sistema cuenta con 4 tablas principales:
 | COBRO | Registro de cada pago diario realizado |
 
 ### Diagrama Entidad-Relacion (DER)
-![Diagrama Entidad Relacion](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Diagrama_Entidad_Relacion.png)
+![Diagrama Entidad Relacion]<img width="561" height="309" alt="image" src="https://github.com/user-attachments/assets/35240e5b-395f-4be2-9883-dc0ce58154b9" />
+
  
 ### Modelo Relacional (MR)
-![Modelo Relacional](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Modelo_Relacional.png)
+![Modelo Relacional]<img width="578" height="358" alt="image" src="https://github.com/user-attachments/assets/5f168264-2cef-42b0-a39e-2470de73fea3" />
 
 ### Cardinalidades
-COBRADOR — PRESTAMO (1:N) <br>
-Un cobrador puede gestionar muchos prestamos, pero un prestamo es gestionado por un solo cobrador. <br>
-CLIENTE — PRESTAMO (1:N) <br>
+PRODUCTO — PRODUCTO_DEFECTUOSO (1:N) <br>
+Un producto puede tener varios registros de defectos, pero un producto defectuoso pertenece a un solo producto. <br>
+PRODUCTO — ALERTA_STOCK (1:N) <br>
 Un cliente puede solicitar muchos prestamos, pero un prestamo pertenece a un solo cliente. <br>
-PRESTAMO — COBRO (1:N) <br>
-Un prestamo puede generar muchos cobros, pero un cobro pertenece a un solo prestamo.
+Un producto puede generar múltiples alertas de stock, pero cada alerta corresponde a un solo producto.
 
 | Entidad A | Relacion | Entidad B | Cardinalidad |
 |---|---|---|---|
-| COBRADOR | gestiona | PRESTAMO | 1:N |
-| CLIENTE | solicita | PRESTAMO | 1:N |
-| PRESTAMO | genera | COBRO | 1:N |
+| PRODUCTO  | presenta | PRODUCTO_DEFECTUOSO | 1:N |
+| PRODUCTO | genera | ALERTA_STOCK | 1:N |
 
 
 ### Base de datos
