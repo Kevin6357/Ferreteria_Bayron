@@ -3,19 +3,22 @@ Más info en [mi tablero de trello](https://trello.com/invite/b/69a1f855ef397664
 ![TRELLO](https://github.com/Kevin6357/Ferreteria_Bayron/blob/a65f2edaee9a97e385b0895dd7b36b57ceea333c/Captura%20de%20pantalla%202026-04-20%20222502.png)
 
 ---
-# Sistema de Préstamos Gota a Gota
-Sistema web para la gestión de préstamos a crédito con facilidades de pago diario, semanal y mensual. Desarrollado como proyecto final del curso de Java Web en SENATI.
+# Sistema de Inventario
+Sistema web para la gestión de Venta de herramientas, materiales de construcción y productos de mantenimiento.
 
 ## Descripcion del negocio
-Nombre: Prestamos Gota a Gota <br>
-Giro: Financiera informal de creditos personales <br>
-Tamaño: Pequeña empresa, operacion individual o familiar <br>
-Contexto: Negocio muy comun en el Peru donde un cobrador otorga prestamos pequeños a personas que no acceden a bancos, cobrando cuotas diarias, semanales o mensuales visitando al cliente en su domicilio o trabajo. <br>
-Justificacion: Se necesita un sistema digital para reemplazar el cuaderno manual del cobrador, evitar errores y tener un control claro de cada prestamo y cobro.
+Nombre: Ferretería Bayron  <br>
+Giro: Venta de herramientas, materiales de construcción y artículos de ferretería. <br>
+Tamaño: Pequeña empresa, operación individual o familiar. <br>
+Contexto: Negocio común en el Perú dedicado a la comercialización de productos como herramientas manuales, eléctricas, materiales de construcción y accesorios. La gestión del inventario, ventas y control de productos defectuosos suele realizarse de forma manual o con registros básicos, lo que puede generar desorden o pérdidas de información. <br>
+Justificacion: Se requiere un sistema digital que permita gestionar el inventario, registrar productos defectuosos, controlar el stock y facilitar el seguimiento de ventas, reduciendo errores y mejorando la organización del negocio.
 
 ## Identificar el problema y solución
-Problema: El cobrador lleva el registro de prestamos y cobros en un cuaderno o en papel, lo que genera errores, perdida de informacion, dificultad para saber cuanto debe cada cliente y cuantas cuotas faltan. <br>
-Solucion tecnologica: Desarrollar un sistema web con Java Spring Boot y MySQL que permita registrar clientes, prestamos y cobros diarios, mostrando en todo momento el estado de cada prestamo y el historial de pagos.
+Problema:Se requiere un sistema digital que permita gestionar el inventario, registrar productos defectuosos, controlar el stock y facilitar el seguimiento de ventas, reduciendo errores y mejorando la organización del negocio. <br>
+Solucion tecnologica: Para mejorar esta situación, se propone desarrollar un sistema de gestión de inventario que permita tener un mejor control de los productos. 
+Este sistema ayudará a identificar fácilmente los productos defectuosos para evitar su venta, avisar cuando un producto esté por agotarse y detectar aquellos que tienen exceso de stock. 
+De esta manera, la empresa podrá organizar mejor su inventario, tomar decisiones más acertadas y trabajar de forma más ordenada y eficiente. 
+
 
  
 ## Requerimientos Funcionales
